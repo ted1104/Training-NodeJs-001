@@ -1,5 +1,6 @@
 const sayHi = (name) => {
   console.log(`Hello there ${name}`);
 };
-
-module.exports = sayHi;
+// export default sayHi;
+module.exports = { sayHi };
+// console.log(module);
