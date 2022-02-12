@@ -1,9 +1,13 @@
-// GLOBALS - NO WINDOWS
-/*
-__dirname - path to current path
-__filename - file name of the current file
-require : function to use modules (commonJS)
-module : info about current module (file)
-process : info about env where the program is beign executing
-*/
-console.log(__dirname, __filename);
+//MODULES : encapsulated code (only share minimum)
+//CommonJS every file is module (by defautl)
+
+const names = require("./4-name");
+const sayHi = require("./5-utils");
+
+sayHi(names.john);
+sayHi(names.peter);
+// sayHi("Teddy");
+// sayHi(peter);
+// sayHi(john);
+
+// console.log(sayHi);
