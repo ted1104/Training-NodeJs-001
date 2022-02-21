@@ -1,34 +1,23 @@
 //BUILT IN MODULES
-// FS MODULE : ASYNC
-const { readFile, writeFile } = require("fs");
-// const first = readFileSync("./content/firs.txt", "utf-8");
+// HTTP MODULE
+const http = require("http");
 
-readFile("./content/first.txt", "utf-8", (err, result) => {
-  if (err) {
-    console.log(err);
+const server = http.createServer((req, res) => {
+  if (req.url === "/") {
+    res.end("Welcome to our home page");
+    return;
+  }
+  if (req.url === "/about") {
+    res.end("About page");
     return;
   }
 
-  const first = result;
-  readFile("./content/second.txt", "utf-8", (err, result) => {
-    if (err) {
-      console.log(err);
-      return;
-    }
-    const second = result;
+  //if use ask an introuvable page
 
-    writeFile(
-      "./content/result-async.txt",
-      `Hello is the result ${first}, ${second}`,
-      (err, result) => {
-        if (err) {
-          console.log(err);
-          return;
-        }
-
-        console.log(result);
-      }
-    );
-  });
+  res.end(`
+  <h1>Ooops!!</h1>
+  <p>We can't seem to find the page you are looking for</p>
+  <a href="/">Back to home page</a>
+  `);
 });
-// console.log(first);
+server.listen(5004);
