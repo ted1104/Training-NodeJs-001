@@ -1,0 +1,1 @@
+Hello is the result Hello text in the first file, Hello text in the second file

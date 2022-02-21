@@ -1,5 +1,5 @@
 //BUILT IN MODULES
-//FS sync MODULE
+//FS MODULE : SYNC
 
 const fs = require("fs");
 
