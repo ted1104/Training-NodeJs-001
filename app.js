@@ -1,23 +1,14 @@
-//BUILT IN MODULES
-// HTTP MODULE
-const http = require("http");
+//NPM : Node Package Manager
+/*
+  install as local dependecy : a utiliser seulement dans ce project particulier
+  npm i <packageName>
 
-const server = http.createServer((req, res) => {
-  if (req.url === "/") {
-    res.end("Welcome to our home page");
-    return;
-  }
-  if (req.url === "/about") {
-    res.end("About page");
-    return;
-  }
+  intall global dependecy : a utiliser dans tous les projects
+  npm install -g <packageName>
+  sudo npm install -g <packageName> (mac)
 
-  //if use ask an introuvable page
-
-  res.end(`
-  <h1>Ooops!!</h1>
-  <p>We can't seem to find the page you are looking for</p>
-  <a href="/">Back to home page</a>
-  `);
-});
-server.listen(5004);
+  package.json : manifest file (stores important informations about project and packages used)
+  manual approach we need to create package.json in the root,
+  npm init (step by step, press enter to skip)
+  npm init -y (initialisatio project with all config in default)
+*/
